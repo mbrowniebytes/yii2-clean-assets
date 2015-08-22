@@ -1,0 +1,13 @@
+{
+    "name": "yiisoft/yii2-clean-assets",
+	
+    "type": "yii2-extension",
+
+    "description": "Clean yii2 web/assets/ directory",
+    "keywords": ["yii2", "clean", "assets"],
+    "license": "MIT",
+
+    "require": {
+        "yiisoft/yii2": "*"
+    }
+}
