@@ -97,8 +97,8 @@ class MyController extends BaseController
 Additional arguments
 -------------------
 ```
-- -dry-run	do not delete anything
-- -verbose	echo rules being run, dir/file being deleted
-- -silent	do not echo anything
-- -keep=#	nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
+-dry-run	do not delete anything
+-verbose	echo rules being run, dir/file being deleted
+-silent		do not echo anything
+-keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
 ```
