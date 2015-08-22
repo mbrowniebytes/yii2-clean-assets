@@ -92,7 +92,7 @@ class MyController extends BaseController
 	}
 }
 
-
+```
 
 Additional arguments
 -------------------
