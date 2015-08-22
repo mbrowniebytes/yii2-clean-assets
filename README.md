@@ -48,7 +48,7 @@ Done. Removed 0 web/assets/ caches
 
 Since -keep=2 was supplied, the 2 newest caches were kept.
 
-```
+```php
 You could place in a common event so assets are 'auto' cleaned
 
 <?php
@@ -96,8 +96,9 @@ class MyController extends BaseController
 
 Additional arguments
 -------------------
-
+```
 - -dry-run	do not delete anything
 - -verbose	echo rules being run, dir/file being deleted
 - -silent	do not echo anything
 - -keep=#	nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
+```
