@@ -46,7 +46,7 @@ would have removed web/assets/a7594ccf, last modified Aug 20, 2015 2:28:26 PM
 Done. Removed 0 web/assets/ caches
 ```
 
-Since -keep=2 was supplied, the 2 newest caches were kept.
+Since -keep=2 was supplied, the 2 newest caches would be kept.
 
 ```php
 You could place in a common event so assets are 'auto' cleaned
