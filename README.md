@@ -36,7 +36,8 @@ To use this extension, add the following code in your application configuration 
     ],
 ],
 ```
-To use this extension, call it from the command line 
+
+Then call the extension from the command line 
 
 ```
 /path/yii/web/assets> ls -l
