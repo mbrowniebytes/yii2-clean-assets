@@ -56,9 +56,8 @@ Done. Removed 0 web/assets/ caches
 
 Since -keep=2 was supplied, the 2 newest caches would be kept.
 
+You could also call the extension in a common event so assets are 'auto' cleaned
 ```php
-You could place in a common event so assets are 'auto' cleaned
-
 <?php
 namespace app\controllers;
 
