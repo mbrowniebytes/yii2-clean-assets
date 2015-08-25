@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require mbrowniebytes/yii2-clean-assets
+php composer.phar require mbrowniebytes/yii2-clean-assets:dev-master
 ```
 
 or add
 
 ```json
-"mbrowniebytes/yii2-clean-assets": "*"
+"mbrowniebytes/yii2-clean-assets": "dev-master"
 ```
 
 to the require section of your composer.json.
@@ -28,6 +28,14 @@ to the require section of your composer.json.
 Usage
 -----
 
+To use this extension, add the following code in your application configuration (console.php):
+```php
+'controllerMap' => [
+    'clean-assets' => [
+        'class' => 'mbrowniebytes\yii2cleanassets\CleanAssetsController',
+    ],
+],
+```
 To use this extension, call it from the command line 
 
 ```
@@ -89,7 +97,7 @@ class MyController extends BaseController
 {
     public function actionIndex()
     {
-	}
+    }
 }
 
 ```
