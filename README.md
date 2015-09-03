@@ -72,7 +72,7 @@ class BaseController extends Controller
 	{
 		// keep dev/test env clean; remove old web/assets/ caches
 		if (YII_ENV != 'prod' && rand(0, 100) < 30) {
-			$clean_assets = new CleanAssets();
+			$clean_assets = new CleanAssets('CleanAssetsController', 'command');
 			$clean_assets->keep = 4;
 			$clean_assets->silent = true;
 			$nbr_cleanded = $clean_assets->cleanAssetDir();
