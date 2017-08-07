@@ -35,8 +35,8 @@ Usage
 -----
 
 To use this extension, add the following code in your application configuration 
-basic template: config/console.php:
-advanced template: common/config/main-local.php
+- basic template: config/console.php:
+- advanced template: common/config/main-local.php
 ```php
 'controllerMap' => [
     'clean-assets' => [
