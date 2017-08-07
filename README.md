@@ -111,7 +111,7 @@ dry-run     	show what would happen; do not delete anything
 verbose     	show more info; echo rules being run, dir/file being deleted
 silent		do not echo anything
 keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
-structure=a 	based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (default)
+structure=a 	based on yii2 structures, set asset dirs to clean; advanced, basic, auto (default)
 dirs=a,b    	list of custom asset dirs to clean, comma seperated
 ```
 
