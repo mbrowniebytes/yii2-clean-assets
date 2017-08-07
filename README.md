@@ -25,6 +25,12 @@ or add
 to the require section of your composer.json.
 
 
+Tags
+-----
+- 0.0.1 exposes cleanAssetDir() and options have a dash ie `-verbose` for earlier yii 2.0.?
+- 0.1.0 Issue [#1](../../issues/1) exposes cleanAssetDirs(), cleanAssetDir($dir) now requires a param, and options are now without a dash ie `verbose` for yii 2.0.13  
+
+
 Usage
 -----
 
@@ -77,7 +83,7 @@ class BaseController extends Controller
 			$clean_assets = new CleanAssets('CleanAssetsController', 'command');
 			$clean_assets->keep = 4;
 			$clean_assets->silent = true;
-			$nbr_cleanded = $clean_assets->**cleanAssetDirs();**
+			$nbr_cleanded = $clean_assets->cleanAssetDirs();
 		}
 	}
 
@@ -111,6 +117,6 @@ dry-run     	show what would happen; do not delete anything
 verbose     	show more info; echo rules being run, dir/file being deleted
 silent		do not echo anything
 keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
-**structure=a 	based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (both)**
-**dirs=a,b    	list of custom asset dirs to clean, comma seperated**
+structure=a 	based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (both)
+dirs=a,b    	list of custom asset dirs to clean, comma seperated
 ```
