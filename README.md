@@ -117,13 +117,13 @@ dirs=a,b    	list of custom asset dirs to clean, comma seperated
 
 Change log
 -----
-08-25-2015 tag 0.0.1  
-- exposes cleanAssetDir()
-- options have a dash ie `-verbose` for earlier yii 2.0.?
-
 08-07-2017 tag 0.1.0 
 - issue [#1](../../issues/1) support advanced template
 - exposes new cleanAssetDirs()
 - cleanAssetDir($dir) now requires a param
 - options are now without a dash ie `verbose` for yii 2.0.13  
+
+08-25-2015 tag 0.0.1  
+- exposes cleanAssetDir()
+- options have a dash ie `-verbose` for earlier yii 2.0.?
 
