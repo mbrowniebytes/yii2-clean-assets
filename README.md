@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require mbrowniebytes/yii2-clean-assets:dev-master
+composer require mbrowniebytes/yii2-clean-assets:0.1.0
 ```
 
 or add
 
 ```json
-"mbrowniebytes/yii2-clean-assets": "dev-master"
+"mbrowniebytes/yii2-clean-assets": "0.1.0"
 ```
 
 to the require section of your composer.json.
@@ -28,7 +28,9 @@ to the require section of your composer.json.
 Usage
 -----
 
-To use this extension, add the following code in your application configuration (console.php):
+To use this extension, add the following code in your application configuration 
+basic template: config/console.php:
+advanced template: common/config/main-local.php
 ```php
 'controllerMap' => [
     'clean-assets' => [
@@ -41,21 +43,21 @@ Then call the extension from the command line
 
 ```
 /path/yii/web/assets> ls -l
-08/18/2015  05:07 PM    <DIR>          1069cc51
-08/18/2015  05:07 PM    <DIR>          324e82f6
-08/20/2015  09:28 AM    <DIR>          8443a260
-08/20/2015  10:39 AM    <DIR>          a66e14a3
-08/20/2015  09:28 AM    <DIR>          a7594ccf
+08/2/2017  05:07 PM    <DIR>          1069cc51
+08/2/2017  05:07 PM    <DIR>          324e82f6
+08/4/2017  09:29 AM    <DIR>          8443a260
+08/4/2017  10:39 AM    <DIR>          a66e14a3
+08/4/2017  09:28 AM    <DIR>          a7594ccf
 
-/path/yii> php yii clean-assets -dry-run -verbose -keep=2
+/path/yii> php yii clean-assets dry-run verbose keep=2
 Checking web/assets/ to remove old caches ..
-would have removed web/assets/1069cc51, last modified Aug 18, 2015 10:07:20 PM
-would have removed web/assets/324e82f6, last modified Aug 18, 2015 10:07:20 PM
-would have removed web/assets/a7594ccf, last modified Aug 20, 2015 2:28:26 PM
+would have removed web/assets/1069cc51, last modified Aug 2, 2017 05:07:21 PM
+would have removed web/assets/324e82f6, last modified Aug 2, 2017 05:07:22 PM
+would have removed web/assets/a7594ccf, last modified Aug 4, 2017 09:28:26 PM
 Done. Removed 0 web/assets/ caches
 ```
 
-Since -keep=2 was supplied, the 2 newest caches would be kept.
+Since keep=2 was supplied, the 2 newest caches would be kept.
 
 You could also call the extension in a common event so assets are 'auto' cleaned
 ```php
@@ -75,7 +77,7 @@ class BaseController extends Controller
 			$clean_assets = new CleanAssets('CleanAssetsController', 'command');
 			$clean_assets->keep = 4;
 			$clean_assets->silent = true;
-			$nbr_cleanded = $clean_assets->cleanAssetDir();
+			$nbr_cleanded = $clean_assets->cleanAssetDirs();
 		}
 	}
 
@@ -105,8 +107,10 @@ class MyController extends BaseController
 Additional arguments
 -------------------
 ```
--dry-run	do not delete anything
--verbose	echo rules being run, dir/file being deleted
--silent		do not echo anything
--keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
+dry-run     show what would happen; do not delete anything
+verbose     show more info; echo rules being run, dir/file being deleted
+silent		do not echo anything
+keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
+structure=a based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (both)
+dirs=a,b    list of custom asset dirs to clean, comma seperated
 ```
