@@ -27,8 +27,8 @@ to the require section of your composer.json.
 
 Tags
 -----
-- 0.0.1 exposes cleanAssetDir() and options have a dash ie `-verbose` for earlier yii 2.0.?
-- 0.1.0 Issue [#1](../../issues/1) exposes cleanAssetDirs(), cleanAssetDir($dir) now requires a param, and options are now without a dash ie `verbose` for yii 2.0.13  
+- 0.0.1 exposes cleanAssetDir(); options have a dash ie `-verbose` for earlier yii 2.0.?
+- 0.1.0 Issue [#1](../../issues/1) support advance template; exposes new cleanAssetDirs(); cleanAssetDir($dir) now requires a param; options are now without a dash ie `verbose` for yii 2.0.13  
 
 
 Usage
