@@ -77,7 +77,7 @@ class BaseController extends Controller
 			$clean_assets = new CleanAssets('CleanAssetsController', 'command');
 			$clean_assets->keep = 4;
 			$clean_assets->silent = true;
-			$nbr_cleanded = $clean_assets->cleanAssetDirs();
+			$nbr_cleanded = $clean_assets->**cleanAssetDirs();**
 		}
 	}
 
@@ -107,10 +107,10 @@ class MyController extends BaseController
 Additional arguments
 -------------------
 ```
-dry-run     show what would happen; do not delete anything
-verbose     show more info; echo rules being run, dir/file being deleted
+dry-run     	show what would happen; do not delete anything
+verbose     	show more info; echo rules being run, dir/file being deleted
 silent		do not echo anything
 keep=#		nbr asset dirs to keep; might be one or more for app, one for toolbar, etc
-structure=a based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (both)
-dirs=a,b    list of custom asset dirs to clean, comma seperated
+**structure=a 	based on yii2 recommended structures, set asset dirs to clean; advanced, basic, auto (both)**
+**dirs=a,b    	list of custom asset dirs to clean, comma seperated**
 ```
